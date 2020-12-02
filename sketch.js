@@ -31,10 +31,10 @@ function draw() {
   height = Math.round(random(55,70));
     car.velocityX = speed;
     car.collide(wall);
-    if(wall.x-car.x<wall.width/2+ car.width/2)
+    if(wall.x-car.x<wall.width/2+ car.width/2){
     car.velocityX=0;
     deformation=Math.round(0.5*weight*speed*speed/22500);
-
+    }
     if(deformation>= 100){
       car.shapeColor="green"
       rating="BAD";
@@ -49,7 +49,7 @@ function draw() {
     }
     state="end"
   }
-if(state="end"){
+if(state===S"end"){
   if(deformation>=100){
     fill("green");
   }
